@@ -1,16 +1,46 @@
-header {
-    background: #F7C569;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Estilos Gerais */
 
 a {
     text-decoration: none !important;
 }
 
-ul li {
-    list-style: none;
+ul {
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+/* Estilos de cada Sessão */
+/* === HEADER === */
+header {
+    background: #F7C569;
+}
+
+header .logo {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+}
+
+header nav ul li {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #adoption {
     color: #F7C569;
-    background: #35537A ;
+    background: #35537A;
 }
