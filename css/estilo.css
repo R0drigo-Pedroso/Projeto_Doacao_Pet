@@ -1,8 +1,16 @@
+header {
+    background: #F7C569;
+}
+
 a {
     text-decoration: none !important;
 }
 
 ul li {
-    margin: 0 10px 0 10px;
     list-style: none;
+}
+
+#adoption {
+    color: #F7C569;
+    background: #35537A ;
 }
