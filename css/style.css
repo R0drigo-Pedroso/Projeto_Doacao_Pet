@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Variaveis */
 :root {
     --dark-blue: #35537a;
@@ -12,8 +14,8 @@
     --brown: #ab927d;
     --gray: #ebebeb;
     --white: #ffffff;
-  }
-  
+}
+
 /* Estilos Gerais */
 
 a {
@@ -28,7 +30,7 @@ ul {
 /* Estilos de cada Sessão */
 /* === HEADER === */
 header {
-    background: #F7C569;
+    background: var(--yellow);
 }
 
 header .logo {
@@ -49,7 +51,30 @@ header nav ul li {
     font-family: 'Montserrat', sans-serif;
 }
 
+header nav ul li a {
+    color: var(--light-blue);
+
+}
+/* About */
+.about {
+    background-color: var(--yellow);
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
 #adoption {
-    color: #F7C569;
-    background: #35537A;
+    color: var(--yellow);
+    background: var(--dark-blue);
 }
