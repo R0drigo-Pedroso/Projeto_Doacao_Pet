@@ -4,7 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Variaveis */
+:root {
+    --dark-blue: #35537a;
+    --light-blue: #718eca;
+    --yellow: #f7c569;
+    --brown: #ab927d;
+    --gray: #ebebeb;
+    --white: #ffffff;
+  }
+  
 /* Estilos Gerais */
 
 a {
