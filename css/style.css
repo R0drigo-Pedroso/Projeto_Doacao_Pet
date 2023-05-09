@@ -53,7 +53,7 @@ header nav ul {
 
 header nav ul li {
   font-weight: 500;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;   
 }
 header nav ul li .btn#adoption {
   color: var(--yellow);
@@ -62,7 +62,17 @@ header nav ul li .btn#adoption {
 
 header nav ul li a {
   color: var(--light-blue);
+  
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
 }
+
+header nav ul li a:hover{
+  background: var(--gray);
+  color: var(--yellow);
+}
+
 /* About */
 .about {
   background-color: var(--yellow);
@@ -82,7 +92,6 @@ header nav ul li a {
 }
 
 /* History section */
-
 .history {
   background: var(--light-blue);
   height: 100vh;
