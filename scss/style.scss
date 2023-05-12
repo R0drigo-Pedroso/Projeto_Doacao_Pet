@@ -1,0 +1,107 @@
+$dark-blue: #35537a;
+$light-blue: #718eca;
+$yellow: #f7c569;
+$brown: #ab927d;
+$gray: #ebebeb;
+$white: #ffffff;
+$black: #040d21;
+$font: "Montserrat", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Cor do fundo */
+::-webkit-scrollbar-track {
+    background-color: $white;
+}
+
+/* Cor da thumb */
+::-webkit-scrollbar-thumb {
+    background-color: $dark-blue;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.title {
+    font-size: 3.25rem;
+    font-weight: 600;
+    font-family: $font;
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 100%;
+    gap: 0.8rem;
+
+    img {
+        border-radius: 0.4rem;
+        width: 300px;
+        height: 200px;
+
+        &:first-child {
+            grid-column: 1/3;
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}
+
+ul.social-icons {
+    display: flex;
+    padding-left: 0;
+    justify-content: space-between;
+    max-width: 400px;
+
+    li {
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0.5rem
+        }
+    }
+}
+
+// Edita Bootstrap
+.btn {
+    font-weight: 500;
+}
+
+.btn-light {
+    width: 125px;
+    height: 40px;
+}
+
+@import './_header.scss';
+@import './_about.scss';
+@import './_history.scss';
+@import './_cats.scss';
+@import './_dogs.scss';
+@import './_adoption.scss';
+@import './_contact.scss';
+@import './_footer.scss';

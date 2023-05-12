@@ -1,0 +1,21 @@
+.history {
+    background: $light-blue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+
+        &-text {
+            flex: 1;
+
+            
+        }
+
+        
+    }
+}

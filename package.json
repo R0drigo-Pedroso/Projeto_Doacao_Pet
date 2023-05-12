@@ -1,0 +1,27 @@
+{
+  "name": "projeto_doacao_pet",
+  "version": "1.0.0",
+  "description": "O projeto trata-se de uma página web para doação de animais de estimação, desenvolvido no primeiro semestre. A página provavelmente inclui recursos como cadastro de animais disponíveis para adoção, informações sobre os animais, informações de contato para adoção, e outros recursos relevantes. O objetivo do projeto é fornecer uma plataforma para pessoas interessadas em adotar animais de estimação e para aqueles que precisam doar seus animais de estimação.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R0drigo-Pedroso/Projeto_Doacao_Pet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R0drigo-Pedroso/Projeto_Doacao_Pet/issues"
+  },
+  "homepage": "https://github.com/R0drigo-Pedroso/Projeto_Doacao_Pet#readme",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}
