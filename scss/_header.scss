@@ -14,24 +14,23 @@ header {
         gap: 10px;
 
         li {
-            font-weight: 500;
-            font-family: "Montserrat", sans-serif;
-
+            
             .btn {
                 color: $yellow;
                 background: $dark-blue;
                 &:hover {
                     color: $dark-blue;
                     background: $gray;
-
+                    
                 }
             }
-
+            
             a {
                 color: $light-blue;
                 width: 100%;
                 padding: .6rem 1rem;
                 border-radius: 4px;
+                font-weight: 500;
 
                 &:hover {
                     background: $gray;
