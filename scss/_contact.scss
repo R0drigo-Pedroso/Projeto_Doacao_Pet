@@ -1,0 +1,44 @@
+.contact {
+    background: $light-blue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 5rem;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        &-list {
+            flex: 1.5;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            padding-left: 2rem;
+            .contact-item {
+                span {
+                    font-size: 32px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+                ul {
+                    font-weight: 500;
+                    padding-left: 0;
+                    
+                    li {
+                        text-transform: capitalize;
+                        margin-bottom: 1rem;
+                        &:first-child{
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

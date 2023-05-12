@@ -1,0 +1,13 @@
+.cats {
+    background-color: $yellow;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.5rem;
+    }
+}
