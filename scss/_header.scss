@@ -1,10 +1,14 @@
 header {
-    background: $yellow;
-
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: $yellow;
+    
     .logo {
         font-size: 18px;
         font-weight: 600;
         font-family: "Montserrat", sans-serif;
+  
     }
 
     nav ul {
@@ -36,6 +40,29 @@ header {
                     background: $gray;
                     color: $dark-blue;
                     transition: all .4s;
+                }
+            }
+        }
+    }
+
+    &.in-banner {
+        nav ul {
+            li {
+                .btn {
+                    color: $yellow;
+                    background: $dark-blue;
+                    &:hover {
+                        color: $dark-blue;
+                        background: $gray;
+                    }
+                }
+                
+                a {
+                    color: $light-blue;
+                    &:hover {
+                        background: $gray;
+                        color: $dark-blue;
+                    }
                 }
             }
         }
