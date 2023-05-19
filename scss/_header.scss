@@ -3,20 +3,22 @@ header {
     display: flex;
     width: 100%;
     background-color: $yellow;
+    transition: .6s all;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     
     .logo {
         font-size: 18px;
         font-weight: 600;
         font-family: "Montserrat", sans-serif;
-  
+        
     }
-
+    
     nav ul {
         display: flex;
         align-items: center;
         width: fit-content;
         gap: 10px;
-
+        
         li {
             
             .btn {
@@ -35,7 +37,7 @@ header {
                 padding: .6rem 1rem;
                 border-radius: 4px;
                 font-weight: 500;
-
+                
                 &:hover {
                     background: $gray;
                     color: $dark-blue;
@@ -46,19 +48,20 @@ header {
     }
 
     &.in-banner {
+        background-color: transparent;
+        box-shadow: none;
+        .logo {
+            color: $white;
+        }
         nav ul {
             li {
                 .btn {
-                    color: $yellow;
-                    background: $dark-blue;
-                    &:hover {
-                        color: $dark-blue;
-                        background: $gray;
-                    }
+                    color: $dark-blue;
+                    background: $white;
                 }
                 
                 a {
-                    color: $light-blue;
+                    color: $white;
                     &:hover {
                         background: $gray;
                         color: $dark-blue;
