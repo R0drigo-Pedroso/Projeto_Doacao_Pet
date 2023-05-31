@@ -1,74 +1,71 @@
 header {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    background-color: $yellow;
-    transition: .6s all;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    
-    .logo {
-        font-size: 18px;
-        font-weight: 600;
-        font-family: "Montserrat", sans-serif;
-        
-    }
-    
-    nav ul {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        gap: 10px;
-        
-        li {
-            
-            .btn {
-                color: $yellow;
-                background: $dark-blue;
-                &:hover {
-                    color: $dark-blue;
-                    background: $gray;
-                    
-                }
-            }
-            
-            a {
-                color: $light-blue;
-                width: 100%;
-                padding: .6rem 1rem;
-                border-radius: 4px;
-                font-weight: 500;
-                
-                &:hover {
-                    background: $gray;
-                    color: $dark-blue;
-                    transition: all .4s;
-                }
-            }
-        }
-    }
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: $yellow;
+  transition: 0.6s all;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 
-    &.in-banner {
-        background-color: transparent;
-        box-shadow: none;
-        .logo {
-            color: $white;
+  .logo {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+
+    li {
+      .btn {
+        color: $yellow;
+        background: $dark-blue;
+        &:hover {
+          color: $dark-blue;
+          background: $gray;
         }
-        nav ul {
-            li {
-                .btn {
-                    color: $dark-blue;
-                    background: $white;
-                }
-                
-                a {
-                    color: $white;
-                    &:hover {
-                        background: $gray;
-                        color: $dark-blue;
-                    }
-                }
-            }
+      }
+
+      a {
+        color: $light-blue;
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: 4px;
+        font-weight: 500;
+
+        &:hover {
+          background: $gray;
+          color: $dark-blue;
+          transition: all 0.4s;
         }
+      }
     }
+  }
+
+  &.in-banner {
+    background-color: transparent;
+    box-shadow: none;
+    .logo {
+      color: $white;
+    }
+    nav ul {
+      li {
+        .btn {
+          color: $dark-blue;
+          background: $white;
+        }
+
+        a {
+          color: $white;
+          &:hover {
+            background: $gray;
+            color: $dark-blue;
+          }
+        }
+      }
+    }
+  }
 }
