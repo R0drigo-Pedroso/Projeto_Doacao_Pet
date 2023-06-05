@@ -18,7 +18,7 @@
             flex: 1.5;
             display: flex;
             gap: 1rem;
-            justify-content: space-between;
+            justify-content: center;
             padding-left: 2rem;
             .contact-item {
                 span {
@@ -36,9 +36,21 @@
                         &:first-child{
                             margin-top: 1rem;
                         }
+
+                        a {
+                            color: $black;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
 }

@@ -7,62 +7,143 @@ header {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   z-index: 1;
 
-  .logo {
-    font-size: 18px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-  }
+  section {
 
-  nav ul {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    gap: 10px;
-
-    li {
-      .btn {
-        color: $yellow;
-        background: $dark-blue;
-        &:hover {
-          color: $dark-blue;
-          background: $gray;
-        }
-      }
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
 
       a {
-        color: $light-blue;
-        width: 100%;
-        padding: 0.6rem 1rem;
-        border-radius: 4px;
-        font-weight: 500;
-
-        &:hover {
-          background: $gray;
-          color: $dark-blue;
-          transition: all 0.4s;
+        img {
+          max-width: 250px;
         }
       }
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      gap: 10px;
+
+      li {
+        .btn {
+          color: $yellow;
+          background: $dark-blue;
+
+          &:hover {
+            color: $dark-blue;
+            background: $gray;
+          }
+        }
+
+        a {
+          color: $light-blue;
+          width: 100%;
+          padding: 0.6rem 1rem;
+          border-radius: 4px;
+          font-weight: 500;
+
+          &:hover {
+            background: $gray;
+            color: $dark-blue;
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+
+    .btn-mobile {
+      display: none;
+
+    }
+
+    .menu-mobile {
+      display: none;
     }
   }
 
   &.in-banner {
     background-color: transparent;
     box-shadow: none;
-    .logo {
-      color: $white;
+
+    section {
+      .logo {
+        color: $white;
+      }
+
+      nav ul {
+        li {
+          .btn {
+            color: $dark-blue;
+            background: $white;
+          }
+
+          a {
+            color: $white;
+
+            &:hover {
+              background: $gray;
+              color: $dark-blue;
+            }
+          }
+        }
+      }
     }
-    nav ul {
-      li {
-        .btn {
-          color: $dark-blue;
-          background: $white;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    section {
+      nav{
+        display: none;
+      }
+      .btn-mobile {
+        display: block;
+        cursor: pointer;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all .6s;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        svg {
+          fill: $white;
+        }
+      }
+      .menu-mobile {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        justify-content: flex-end;
+        
+
+        &.active {
+          display: flex;
         }
 
-        a {
-          color: $white;
-          &:hover {
-            background: $gray;
-            color: $dark-blue;
+        > ul {
+          background-color: $yellow;
+          width: 100%;
+          max-width: 320px;
+          padding-left: 0;
+          > li {
+            padding: 0 1rem;
+            &:first-child {
+              margin-top: 1rem;
+            }
+            a {
+              color: $black;
+            }
+          }
+          .social-icons {
+            padding: 0 1rem;
           }
         }
       }

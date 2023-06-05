@@ -39,7 +39,7 @@ ul {
 }
 
 .paragraph {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
@@ -48,10 +48,13 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   max-height: 100%;
   gap: 0.8rem;
+  max-width: 600px;
+  width: 100%;
 }
 .gallery img {
   border-radius: 0.4rem;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
@@ -61,13 +64,13 @@ ul {
   max-width: unset;
 }
 
-ul.social-icons {
+.social-icons {
   display: flex;
   padding-left: 0;
   justify-content: space-between;
   max-width: 400px;
 }
-ul.social-icons li img {
+.social-icons li img {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
@@ -87,54 +90,116 @@ header {
   display: flex;
   width: 100%;
   background-color: #f7c569;
+  transition: 0.6s all;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
-header .logo {
+header section .logo {
   font-size: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
-header nav ul {
+header section .logo a img {
+  max-width: 250px;
+}
+header section nav ul {
   display: flex;
   align-items: center;
   width: fit-content;
   gap: 10px;
 }
-header nav ul li .btn {
+header section nav ul li .btn {
   color: #f7c569;
   background: #35537a;
 }
-header nav ul li .btn:hover {
+header section nav ul li .btn:hover {
   color: #35537a;
   background: #ebebeb;
 }
-header nav ul li a {
+header section nav ul li a {
   color: #718eca;
   width: 100%;
   padding: 0.6rem 1rem;
   border-radius: 4px;
   font-weight: 500;
 }
-header nav ul li a:hover {
+header section nav ul li a:hover {
   background: #ebebeb;
   color: #35537a;
   transition: all 0.4s;
 }
-header.in-banner nav ul li .btn {
-  color: #f7c569;
-  background: #35537a;
+header section .btn-mobile {
+  display: none;
 }
-header.in-banner nav ul li .btn:hover {
+header section .menu-mobile {
+  display: none;
+}
+header.in-banner {
+  background-color: transparent;
+  box-shadow: none;
+}
+header.in-banner section .logo {
+  color: #ffffff;
+}
+header.in-banner section nav ul li .btn {
   color: #35537a;
-  background: #ebebeb;
+  background: #ffffff;
 }
-header.in-banner nav ul li a {
-  color: #718eca;
+header.in-banner section nav ul li a {
+  color: #ffffff;
 }
-header.in-banner nav ul li a:hover {
+header.in-banner section nav ul li a:hover {
   background: #ebebeb;
   color: #35537a;
 }
 
+@media screen and (max-width: 1024px) {
+  header section nav {
+    display: none;
+  }
+  header section .btn-mobile {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.6s;
+  }
+  header section .btn-mobile:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  header section .btn-mobile svg {
+    fill: #ffffff;
+  }
+  header section .menu-mobile {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    justify-content: flex-end;
+  }
+  header section .menu-mobile.active {
+    display: flex;
+  }
+  header section .menu-mobile > ul {
+    background-color: #f7c569;
+    width: 100%;
+    max-width: 320px;
+    padding-left: 0;
+  }
+  header section .menu-mobile > ul > li {
+    padding: 0 1rem;
+  }
+  header section .menu-mobile > ul > li:first-child {
+    margin-top: 1rem;
+  }
+  header section .menu-mobile > ul > li a {
+    color: #040d21;
+  }
+  header section .menu-mobile > ul .social-icons {
+    padding: 0 1rem;
+  }
+}
 .about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../img/dogs-cats.jpg");
   background-position: 100%;
@@ -183,6 +248,9 @@ header.in-banner nav ul li a:hover {
   align-items: center;
   gap: 2.5rem;
 }
+.cats-content > div:not(.gallery) {
+  flex: 1;
+}
 
 .dogs {
   background-color: #ab927d;
@@ -196,6 +264,9 @@ header.in-banner nav ul li a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 2.5rem;
+}
+.dogs-content > div:not(.gallery) {
+  flex: 1;
 }
 
 .adoption {
@@ -250,7 +321,7 @@ header.in-banner nav ul li a:hover {
   flex: 1.5;
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: center;
   padding-left: 2rem;
 }
 .contact-content-list .contact-item span {
@@ -268,6 +339,9 @@ header.in-banner nav ul li a:hover {
 }
 .contact-content-list .contact-item ul li:first-child {
   margin-top: 1rem;
+}
+.contact-content-list .contact-item ul li a {
+  color: #040d21;
 }
 
 footer {
