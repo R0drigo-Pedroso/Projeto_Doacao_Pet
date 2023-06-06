@@ -99,7 +99,22 @@ ul {
     width: 125px;
     height: 40px;
 }
+// Responsive
+@media screen and (max-width: 1024px) {
+    .title {
+        text-align: left;
+    }
 
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: unset;
+        img {
+            max-width: unset;
+            min-width: 100px;
+        }
+    }
+}
 @import './_header.scss';
 @import './_about.scss';
 @import './_history.scss';

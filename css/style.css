@@ -85,6 +85,20 @@ ul {
   height: 40px;
 }
 
+@media screen and (max-width: 1024px) {
+  .title {
+    text-align: left;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: unset;
+  }
+  .gallery img {
+    max-width: unset;
+    min-width: 100px;
+  }
+}
 header {
   position: fixed;
   display: flex;
@@ -101,6 +115,7 @@ header section .logo {
 }
 header section .logo a img {
   max-width: 250px;
+  width: 100%;
 }
 header section nav ul {
   display: flex;
@@ -210,7 +225,7 @@ header.in-banner section nav ul li a:hover {
   justify-content: center;
   align-items: center;
 }
-.about .about-content {
+.about-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -220,6 +235,11 @@ header.in-banner section nav ul li a:hover {
   color: #ebebeb;
 }
 
+@media screen and (max-width: 1024px) {
+  .about-content h1 {
+    text-align: center;
+  }
+}
 .history {
   background: #718eca;
   min-height: 100vh;
@@ -236,6 +256,15 @@ header.in-banner section nav ul li a:hover {
   flex: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  .history {
+    padding: 3.5rem 0;
+  }
+  .history-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
 .cats {
   background-color: #f7c569;
   min-height: 100vh;
@@ -252,6 +281,15 @@ header.in-banner section nav ul li a:hover {
   flex: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  .cats {
+    padding: 3.5rem 0;
+  }
+  .cats-content {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+}
 .dogs {
   background-color: #ab927d;
   min-height: 100vh;
@@ -269,6 +307,18 @@ header.in-banner section nav ul li a:hover {
   flex: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  .dogs {
+    padding: 3.5rem 0;
+  }
+  .dogs-content {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .dogs-content .gallery img:nth-child(2) {
+    object-position: 0 40%;
+  }
+}
 .adoption {
   background-color: #f7c569;
   min-height: 100vh;
@@ -290,6 +340,7 @@ header.in-banner section nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 .adoption-content ul li div span {
   font-size: 20px;
@@ -300,6 +351,21 @@ header.in-banner section nav ul li a:hover {
   font-weight: 500;
 }
 
+@media screen and (max-width: 1024px) {
+  .adoption {
+    padding: 3.5rem 0;
+  }
+  .adoption-content h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 468px) {
+  .adoption-content ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
 .contact {
   background: #718eca;
   min-height: 100vh;
@@ -311,6 +377,7 @@ header.in-banner section nav ul li a:hover {
   justify-content: space-between;
   align-items: flex-start;
   gap: 5rem;
+  flex-wrap: wrap;
 }
 .contact-content-text {
   display: flex;
@@ -344,11 +411,30 @@ header.in-banner section nav ul li a:hover {
   color: #040d21;
 }
 
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 3.5rem 0;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-content-list {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+}
 footer {
   padding: 2rem 0;
 }
 footer span {
   font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

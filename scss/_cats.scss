@@ -17,7 +17,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-    
+    .cats {
+        padding: 3.5rem 0;
+        &-content {
+            flex-direction: column-reverse;
+            gap: 1.5rem;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

@@ -18,7 +18,21 @@
 }
 
 @media screen and (max-width: 1024px) {
-    
+    .dogs {
+        padding: 3.5rem 0;
+        &-content {
+            flex-direction: column-reverse;
+            gap: 1.5rem;
+
+            .gallery {
+                img {
+                    &:nth-child(2){
+                        object-position: 0 40%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

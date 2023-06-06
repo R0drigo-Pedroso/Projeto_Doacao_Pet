@@ -8,6 +8,7 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 5rem;
+        flex-wrap: wrap;
 
         &-text {
             display: flex;
@@ -47,10 +48,16 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
-    
-}
-
 @media screen and (max-width: 768px) {
-    
+    .contact {
+        padding: 3.5rem 0;
+        &-content {
+            flex-direction: column;
+            gap: 2rem;
+            &-list {
+                padding-left: 0;
+                justify-content: flex-start;
+            }
+        }
+    }
 }
